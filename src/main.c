@@ -90,9 +90,6 @@ gthumb_extension_activate(void)
                                         GTH_IMAGE_FORMAT_CAIRO_SURFACE,
                                         "image/x-exr",
                                         NULL);
-    //bindtextdomain (GETTEXT_PACKAGE, EXTENSION_LOCALEDIR);
-    //bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-    printf("Hello World!");
 }
 
 G_MODULE_EXPORT void
