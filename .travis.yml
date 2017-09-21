@@ -4,6 +4,7 @@ sudo: false
 addons:
   apt:
     packages:
+    - gthumb
     - build-essential
     - gthumb-dev
     - gnome-common
