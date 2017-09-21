@@ -5,7 +5,7 @@ addons:
   apt:
     packages:
     - build-essential
-	- gthumb-dev
+    - gthumb-dev
     - gnome-common
     - libglib2.0-dev
     - gnome-doc-utils
