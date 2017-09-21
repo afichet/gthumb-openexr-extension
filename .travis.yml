@@ -4,7 +4,7 @@ sudo: false
 addons:
   apt:
     packages:
-	- build-essential
+    - build-essential
 	- gthumb-dev
     - gnome-common
     - libglib2.0-dev
