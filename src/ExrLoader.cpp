@@ -8,6 +8,7 @@
 #include "ExrLoader.h"
 #include <OpenEXR/ImfRgbaFile.h>
 #include <OpenEXR/ImfArray.h>
+#include <cmath>
 
 ExrLoader::ExrLoader()
 {
