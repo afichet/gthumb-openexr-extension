@@ -2,10 +2,10 @@
 _Name=OpenEXR format support
 _Description=OpenEXR Image Viewer
 Authors=Alban Fichet
-Version=1.0
+Version=%VERSION%
 Category=Viewer
 
 [Loader]
 Type=module
 File=%LIBRARY%
-API=3.5
+API=%GTHUMB_API_VERSION%
