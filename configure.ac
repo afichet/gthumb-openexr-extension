@@ -29,13 +29,13 @@ GNOME_COMMON_INIT
 GNOME_DOC_INIT
 GNOME_MAINTAINER_MODE_DEFINES
 GNOME_COMPILE_WARNINGS([maximum])
-GTHUMB_EXTENSION_INIT(3.5)
+GTHUMB_EXTENSION_INIT(3.4)
 GTHUMB_EXTENSION_RULES
 
 GLIB_REQUIRED=2.16.0
 GTK_REQUIRED=3.0
 GCONF_REQUIRED=2.6.0
-GTHUMB_REQUIRED=3.5
+GTHUMB_REQUIRED=3.4
 
 dnl ===========================================================================
 
@@ -65,14 +65,14 @@ PKG_CHECK_MODULES(EXTENSION, [
 	gio-unix-2.0
 	gtk+-3.0 		>= $GTK_REQUIRED
 	gconf-2.0 		>= $GCONF_REQUIRED
-	gthumb-3.5		>= $GTHUMB_REQUIRED
+	gthumb-3.4		>= $GTHUMB_REQUIRED
 	OpenEXR
 	IlmBase
 ])
 AC_SUBST(EXTENSION_LIBS)
 AC_SUBST(EXTENSION_CFLAGS)
 
-EXTENSION_DIR=`pkg-config --variable=extensionsdir gthumb-3.5`
+EXTENSION_DIR=`pkg-config --variable=extensionsdir gthumb-3.4`
 AC_SUBST(EXTENSION_DIR)
 
 EXTENSION_LIBTOOL_FLAGS='-module -avoid-version -disable-static'
