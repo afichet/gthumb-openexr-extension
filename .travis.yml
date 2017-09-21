@@ -2,14 +2,14 @@ language: cpp
 sudo: false
 
 addons:
-	apt:
-		packages:
-		- gthumb-dev
-		- gnome-common
-		- libglib2.0-dev
-		- gnome-doc-utils
-		- libgtk-3-dev
-		- libgconf2-dev
-		- libopenexr-dev
+  apt:
+    packages:
+    - gthumb-dev
+    - gnome-common
+    - libglib2.0-dev
+    - gnome-doc-utils
+    - libgtk-3-dev
+    - libgconf2-dev
+    - libopenexr-dev
 
 script: ./autogen.sh --prefix=/usr && ./configure && make
