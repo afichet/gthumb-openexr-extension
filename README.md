@@ -3,6 +3,18 @@ OpenEXR Support for gThumb
 
 This implements a basic support for OpenEXR on gThumb, the GNOME image viewer.
 
+Package
+=======
+
+Arch Linux
+----------
+An AUR is available here: https://aur.archlinux.org/packages/gthumb-openexr-extension/
+
+If using yaourt, you can install it with:
+```
+yaourt -S gthumb-openexr-extension
+```
+
 Dependencies
 ============
 
