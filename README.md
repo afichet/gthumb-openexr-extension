@@ -19,9 +19,9 @@ You need to install these dependencies to compile and install the extension:
 * libgconf2-dev
 * libopenexr-dev
 
-'''
+```
 sudo apt install gthumb gthumb-dev gnome-common libglib2.0-dev build-essential gnome-doc-utils libgtk-3-dev libgconf2-dev libopenexr-dev
-'''
+```
 
 Compilation
 ===========
