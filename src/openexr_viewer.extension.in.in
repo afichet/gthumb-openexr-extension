@@ -1,0 +1,11 @@
+[Extension]
+_Name=OpenEXR format support
+_Description=OpenEXR Image Viewer
+Authors=Alban Fichet
+Version=1.0
+Category=Viewer
+
+[Loader]
+Type=module
+File=%LIBRARY%
+API=3.5
