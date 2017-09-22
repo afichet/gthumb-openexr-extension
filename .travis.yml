@@ -17,7 +17,7 @@ addons:
   os: linux
 
 before_script:
-  - sed -ri 's/3.4/3.3/g' configure.ac
-  - sed -ri 's/3.4/3.3/g' src/openexr_viewer.extension.in.in 
+  - sed -ri 's/3.4/3.2/g' configure.ac
+  - sed -ri 's/3.4/3.2/g' src/openexr_viewer.extension.in.in 
 
 script: ./autogen.sh --prefix=/usr && ./configure && make
