@@ -20,5 +20,4 @@ script:
   - sed 's/3.4/3.3/g' configure.ac > configure.ac
   - sed 's/3.4/3.3/g' src/openexr_viewer.extension.in.in > src/openexr_viewer.extension.in.in
   - ./autogen.sh --prefix=/usr
-  - ./configure
   - make
