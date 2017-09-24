@@ -38,9 +38,16 @@ Finally, see the 'Usage' section for activating and using the extension.
 Usage
 =====
 To use the extension, you need to activate it in gThumb.
-Go to the top left menu, then to *Preferences* and on *Extensions*, activate *OpenEXR format support*.
-After restarting gThumb, you should be able to display OpenEXR images.
+Go to the top left menu, then to *Preferences*.
+![1](https://user-images.githubusercontent.com/7930348/30781607-973502e8-a122-11e7-86e1-cd080a8b6b32.png)
 
+Open the *Extensions* tab.
+![2](https://user-images.githubusercontent.com/7930348/30781609-998478da-a122-11e7-89e5-099934c04f16.png)
+
+Tehn activate *OpenEXR format support*.
+![3](https://user-images.githubusercontent.com/7930348/30781612-9ae9e9c6-a122-11e7-9c06-e8da3a114571.png)
+
+After restarting gThumb, you should be able to display OpenEXR images.
 
 Manual installation
 ===================
