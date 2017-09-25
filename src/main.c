@@ -38,9 +38,9 @@ _cairo_image_surface_create_from_exr(GInputStream *istream,
                                      GCancellable *cancellable,
                                      GError **error) {
 
-    GthImage *image;
-    void *in_buffer;
-    gsize in_buffer_size;
+    GthImage *image = NULL;
+    void *in_buffer = NULL;
+    gsize in_buffer_size = 0;
 
     const char* filename = g_file_info_get_attribute_string(file_data->info,
                                                             G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME);
@@ -49,8 +49,9 @@ _cairo_image_surface_create_from_exr(GInputStream *istream,
                                   &in_buffer,
                                   &in_buffer_size,
                                   cancellable,
-                                  error))
-                                  {
+                                  error)) {
+	*original_height = 0;
+	*original_width = 0;
         return image;
     }
 
@@ -79,7 +80,6 @@ _cairo_image_surface_create_from_exr(GInputStream *istream,
     *original_height = height;
     free(pixels);
 
-    //*loaded_original = 1;
     return image;
 }
 
