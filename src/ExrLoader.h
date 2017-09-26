@@ -81,12 +81,6 @@ class MyStream : public Imf::IStream {
         Imf::Int64 _size;
 };
 
-class ExrLoader {
-    public:
-    ExrLoader();
-    virtual ~ExrLoader();
-};
-
 extern "C" unsigned char* load_exr(void* buffer, int size, const char *filename,
                             int *width, int *height);
 

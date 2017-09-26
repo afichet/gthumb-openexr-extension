@@ -10,17 +10,6 @@
 #include <OpenEXR/ImfArray.h>
 #include <cmath>
 
-ExrLoader::ExrLoader()
-{
-    // TODO Auto-generated constructor stub
-    
-}
-
-ExrLoader::~ExrLoader()
-{
-    // TODO Auto-generated destructor stub
-}
-
 double to_sRGB(double rgb_color) {
     const double a = 0.055;
     if (rgb_color < 0.0031308)
