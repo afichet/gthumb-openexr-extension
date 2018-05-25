@@ -13,11 +13,7 @@ addons:
     - libgtk-3-dev
     - libgconf2-dev
     - libopenexr-dev
-  dist: trusty
+  dist: xenialxerus
   os: linux
-
-before_script:
-  - sed -ri 's/3.4/3.2/g' configure.ac
-  - sed -ri 's/3.4/3.2/g' src/openexr_viewer.extension.in.in 
 
 script: ./autogen.sh --prefix=/usr && ./configure && make
