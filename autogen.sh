@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 srcdir=`dirname $0`
 
 gthumb_version=($(gthumb -v | awk '{print $2}' | cut -d. -f1-2))
