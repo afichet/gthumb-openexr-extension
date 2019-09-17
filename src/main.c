@@ -21,7 +21,7 @@
 
 #include <config.h>
 #include <gtk/gtk.h>
-#include <gthumb.h>
+#include <gthumb/gthumb.h>
 #include <glib.h>
 #include <stdio.h>
 
