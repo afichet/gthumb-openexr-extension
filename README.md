@@ -10,7 +10,7 @@ Arch Linux
 ----------
 An AUR is available here: https://aur.archlinux.org/packages/gthumb-openexr-extension/
 
-If using yaourt, you can install it with (after sync):
+If using yay, you can install it with (after sync):
 ```
 yay -Sy
 yay -S gthumb-openexr-extension
