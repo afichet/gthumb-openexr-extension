@@ -12,8 +12,8 @@ An AUR is available here: https://aur.archlinux.org/packages/gthumb-openexr-exte
 
 If using yaourt, you can install it with (after sync):
 ```
-yaourt -Sy
-yaourt -S gthumb-openexr-extension
+yay -Sy
+yay -S gthumb-openexr-extension
 ```
 
 Finally, see the 'Usage' section for activating and using the extension.
