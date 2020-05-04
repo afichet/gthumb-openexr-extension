@@ -1,0 +1,10 @@
+[Extension]
+_Name=OpenEXR format support
+_Description=OpenEXR Image Viewer
+Authors=Alban Fichet
+Version=@VERSION@
+Category=Viewer
+
+[Loader]
+Type=module
+API=@GTHUMB_API_VERSION@
