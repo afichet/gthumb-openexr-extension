@@ -17,6 +17,12 @@ elif [[ "$gthumb_version" == "3.7" ]]; then
 elif [[ "$gthumb_version" == "3.8" ]]; then
 	cp config/configure_3-8.ac configure.ac
 	cp config/openexr_viewer.extension_3-8.in.in src/openexr_viewer.extension.in.in
+elif [[ "$gthumb_version" == "3.9" ]]; then
+	cp config/configure_3-9.ac configure.ac
+	cp config/openexr_viewer.extension_3-9.in.in src/openexr_viewer.extension.in.in
+elif [[ "$gthumb_version" == "3.10" ]]; then
+	cp config/configure_3-10.ac configure.ac
+	cp config/openexr_viewer.extension_3-10.in.in src/openexr_viewer.extension.in.in
 else
 	echo "Your version of gThumb is not supported yet"
 fi
