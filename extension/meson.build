@@ -31,7 +31,7 @@ extension_in_file = configure_file(
 
 i18n.merge_file(
   input : extension_in_file,
-  output : 'openexr_viewer.extension.extension',
+  output : 'openexr_viewer.extension',
   type : 'desktop',
   po_dir : po_dir,
   install : true,
