@@ -75,6 +75,7 @@ config_data.set_quoted('GTHUMB_EXTENSIONS_DIR', extensions_data_dir)
 config_data.set_quoted('CONTACT_SHEET_DATADIR', contact_sheet_data_dir)
 config_data.set_quoted('WEBALBUM_DATADIR', webalbum_data_dir)
 
+libopenexr_dep = dependency('OpenEXR')
 libz_dep = dependency('zlib')
 libm_dep = c_comp.find_library('m')
 libjpeg_dep = c_comp.find_library('jpeg')

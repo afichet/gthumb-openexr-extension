@@ -12,7 +12,8 @@ source_files = files(
 shared_module('openexr_viewer',
   sources : source_files ,
   dependencies : [
-    extension_common_deps
+    extension_common_deps,
+    libopenexr_dep
   ],
   include_directories : [ config_inc, gthumb_inc ],
   c_args : c_args,
