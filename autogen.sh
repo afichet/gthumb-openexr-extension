@@ -42,9 +42,9 @@ source /etc/os-release
 if [[ "$NAME" == "Ubuntu" ]]; then
     if [[ "$VERSION_ID" == "16.04" ]]; then
 	prepare_34
-    elif [[ "$VERSION_ID" == "16.04" ]]; then
+    elif [[ "$VERSION_ID" == "18.04" ]]; then
 	prepare_36
-    elif [[ "$VERSION_ID" == "16.04" ]]; then
+    elif [[ "$VERSION_ID" == "20.04" ]]; then
 	prepare_38
     fi
 else
