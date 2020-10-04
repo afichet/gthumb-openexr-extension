@@ -2,7 +2,7 @@ Source: gthumb-openexr-extension
 Section: graphics
 Priority: optional
 Maintainer: Alban Fichet <alban.fichet@gmx.fr>
-Build-Depends: debhelper (>= 11), 
+Build-Depends: debhelper (>= 11), gnome-common, libglib2.0-dev, libopenexr-dev, libgconf2-dev, libgtk-3-dev, gthumb-dev
 Standards-Version: 4.1.3
 Homepage: https://github.com/yama-chan/gthumb-openexr-extension/
 
