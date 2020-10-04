@@ -18,8 +18,8 @@ yay -S gthumb-openexr-extension
 
 Finally, see the 'Usage' section for activating and using the extension.
 
-Ubuntu 16.04 LTS
-----------------
+Ubuntu 16.04 LTS & 20.04 LTS
+----------------------------
 A ppa is available here: https://launchpad.net/~alban-f/+archive/ubuntu/gthumb-openexr-extension
 
 You need to add it to your repositories:
