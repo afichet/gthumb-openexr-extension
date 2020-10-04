@@ -22,8 +22,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Install OpenEXR dependencies
-        run: sudo apt install gnome-common libglib2.0-dev libopenexr-dev libgconf2-dev libgtk-3-dev gthumb-dev
+      - name: Install dependencies
+        run: sudo apt install gnome-doc-utils gnome-common libglib2.0-dev libopenexr-dev libgconf2-dev libgtk-3-dev gthumb-dev
       
       - name: Configure
         run: ./autogen.sh
