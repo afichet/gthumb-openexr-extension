@@ -1,10 +1,10 @@
 #!/bin/sh
 # Inspired from RetroShare packaging script
 
-MAJOR_VERSION=3
-MINOR_VERSION=0
+MAJOR_VERSION=1
+MINOR_VERSION=2
 PKG_NAME="gthumb-openexr-extension"
-dist="bionic eoan focal groovy"
+dist="bionic focal"
 ppa_addr="ppa:alban-f/gthumb-openexr-extension"
 
 version_number="${MAJOR_VERSION}"'.'"${MINOR_VERSION}"
@@ -33,7 +33,6 @@ tar cvzf "${PKG_NAME}_${version_number}.orig.tar.gz" gthumb-openexr-extension
 # For each distribution, generating a changelog
 for i in ${dist}; do
     cd gthumb-openexr-extension
-    rm -r debian
     cp -r ../../debian .
     sed -e s/XXXXXX/"${rev}"/g -e s/YYYYYY/"${i}"/g -e s/ZZZZZZ/"${version_number}"/g ../../debian/changelog > debian/changelog
     debuild -S
