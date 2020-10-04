@@ -4,7 +4,7 @@
 MAJOR_VERSION=1
 MINOR_VERSION=2
 PKG_NAME="gthumb-openexr-extension"
-dist="bionic focal"
+dist="focal"
 ppa_addr="ppa:alban-f/gthumb-openexr-extension"
 
 version_number="${MAJOR_VERSION}"'.'"${MINOR_VERSION}"
