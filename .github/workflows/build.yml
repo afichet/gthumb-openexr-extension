@@ -28,6 +28,6 @@ jobs:
       - name: Configure
         run: ./autogen.sh
         
-      - name: Build
-        run: make
+     # - name: Build
+     #   run: make
 
