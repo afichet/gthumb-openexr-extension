@@ -2,7 +2,7 @@
 # Inspired from RetroShare packaging script
 
 MAJOR_VERSION=1
-MINOR_VERSION=2
+MINOR_VERSION=3
 PKG_NAME="gthumb-openexr-extension"
 dist="focal"
 ppa_addr="ppa:alban-f/gthumb-openexr-extension"
