@@ -41,7 +41,7 @@ target_link_libraries(openexr-viewer PUBLIC
 
 
 
-set(GTHUMB_EXT_DIR "/usr/lib/gthumb/extensions/")
+set(GTHUMB_EXT_DIR "lib/gthumb/extensions/")
 
 install(TARGETS openexr-viewer DESTINATION ${GTHUMB_EXT_DIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/openexr-viewer.extension DESTINATION ${GTHUMB_EXT_DIR})
