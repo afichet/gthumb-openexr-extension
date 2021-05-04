@@ -9,6 +9,8 @@
 #define SRC_EXRLOADER_H_
 
 #include <OpenEXR/ImfIO.h>
+#include <OpenEXR/ImfInt64.h>
+
 #include <cstring>
 
 class MyStream : public Imf::IStream {

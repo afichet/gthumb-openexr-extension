@@ -1,14 +1,25 @@
 project(gthumb-openexr-extension)
 cmake_minimum_required(VERSION 3.20)
 
-set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
-find_package(OpenEXR REQUIRED)
-
 find_package(PkgConfig REQUIRED)
 
 pkg_check_modules (GTHUMB REQUIRED gthumb-3.10)
 pkg_check_modules (GLIB2 REQUIRED glib-2.0)
 pkg_check_modules(GTK REQUIRED gtk+-3.0)
+
+# Newer versions of OpenEXR (>= 3.0) ship with their own module
+find_package(Imath CONFIG)
+find_package(OpenEXR CONFIG)
+if (OpenEXR_FOUND)
+    set(OpenEXR_LIBRARIES 
+        OpenEXR::OpenEXR
+        Imath::Imath
+    )
+else()
+    set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+    find_package(OpenEXR REQUIRED)
+endif()
+
 
 # set(LIBRARY "libgthumb-openexr-viewer")
 set(API 3.10)
@@ -29,7 +40,7 @@ target_include_directories(openexr-viewer
     ${GTHUMB_INCLUDE_DIRS}
     /usr/include/gthumb
     ${GLIB2_INCLUDE_DIRS}
-    ${GTK_INCLUDE_DIR}
+    ${GTK_INCLUDE_DIRS}
     )
 
 target_link_libraries(openexr-viewer PUBLIC 
