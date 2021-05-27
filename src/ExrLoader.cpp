@@ -6,8 +6,12 @@
  */
 
 #include "ExrLoader.h"
+
 #include <OpenEXR/ImfRgbaFile.h>
 #include <OpenEXR/ImfArray.h>
+#include <OpenEXR/ImfHeader.h>
+#include <OpenEXR/ImfChromaticitiesAttribute.h>
+
 #include <cmath>
 
 double to_sRGB(double rgb_color) {
@@ -36,14 +40,33 @@ unsigned char* load_exr(void* buffer, int size, const char *filename,
 
     unsigned char* img = new unsigned char[3 * w * h];
 
-    for (int y = 0; y < h; y++) {
-        for (int x = 0; x < w; x++) {
-            img[3*(y*w + x) + 0] = (unsigned char)(255.0*std::min(1.0, std::max(0.0, to_sRGB(pixels[y][x].r))));
-            img[3*(y*w + x) + 1] = (unsigned char)(255.0*std::min(1.0, std::max(0.0, to_sRGB(pixels[y][x].g))));
-            img[3*(y*w + x) + 2] = (unsigned char)(255.0*std::min(1.0, std::max(0.0, to_sRGB(pixels[y][x].b))));
-        }
+    // Check if there is specific chromaticities tied to the color representation in this part.
+    const Imf::ChromaticitiesAttribute *c
+        = f.header().findTypedAttribute<Imf::ChromaticitiesAttribute>(
+            "chromaticities");
+            
+    Imf::Chromaticities chromaticities;
+
+    if (c != nullptr) {
+        chromaticities = c->value();
     }
 
+    // Handle custom chromaticities
+    Imath::M44f RGB_XYZ = Imf::RGBtoXYZ(chromaticities, 1.f);
+    Imath::M44f XYZ_RGB = Imf::XYZtoRGB(Imf::Chromaticities(), 1.f);
+
+    Imath::M44f conversionMatrix = RGB_XYZ * XYZ_RGB;
+
+    for (int y = 0; y < h; y++) {
+        for (int x = 0; x < w; x++) {
+            Imath::V3f rgb(pixels[y][x].r, pixels[y][x].g, pixels[y][x].b);
+            rgb *= conversionMatrix;
+
+            img[3*(y*w + x) + 0] = (unsigned char)(255.0*std::min(1.0, std::max(0.0, to_sRGB(rgb.x))));
+            img[3*(y*w + x) + 1] = (unsigned char)(255.0*std::min(1.0, std::max(0.0, to_sRGB(rgb.y))));
+            img[3*(y*w + x) + 2] = (unsigned char)(255.0*std::min(1.0, std::max(0.0, to_sRGB(rgb.z))));
+        }
+    }
 
     return img;
 }
