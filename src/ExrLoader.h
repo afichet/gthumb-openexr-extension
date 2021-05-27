@@ -9,8 +9,8 @@
 #define SRC_EXRLOADER_H_
 
 #include <OpenEXR/ImfIO.h>
-#include <OpenEXR/ImfInt64.h>
 
+#include <cstdint>
 #include <cstring>
 
 class MyStream : public Imf::IStream {
@@ -62,7 +62,7 @@ class MyStream : public Imf::IStream {
         // read the first byte in the file, tellg() returns 0.
         //--------------------------------------------------------
 
-        virtual Imf::Int64   tellg () {
+        virtual uint64_t   tellg () {
             return _pos;
         }
 
@@ -72,15 +72,15 @@ class MyStream : public Imf::IStream {
         // After calling seekg(i), tellg() returns i.
         //-------------------------------------------
 
-        virtual void    seekg (Imf::Int64 pos) {
+        virtual void    seekg (uint64_t pos) {
             _pos = pos;
         }
 
 
       private:
         char* _buff;
-        Imf::Int64 _pos;
-        Imf::Int64 _size;
+        uint64_t _pos;
+        uint64_t _size;
 };
 
 extern "C" unsigned char* load_exr(void* buffer, int size, const char *filename,
