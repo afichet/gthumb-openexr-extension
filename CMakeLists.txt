@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 
 find_package(PkgConfig REQUIRED)
 
-pkg_check_modules (GTHUMB REQUIRED gthumb-3.10)
+pkg_check_modules (GTHUMB REQUIRED gthumb)
 pkg_check_modules (GLIB2 REQUIRED glib-2.0)
 pkg_check_modules(GTK REQUIRED gtk+-3.0)
 
