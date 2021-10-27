@@ -22,7 +22,7 @@ endif()
 
 
 # set(LIBRARY "libgthumb-openexr-viewer")
-set(API 3.10)
+set(API 3.12)
 set(EXT_VERSION 3.10.0)
 
 # configure_file(config.h.in config.h)
